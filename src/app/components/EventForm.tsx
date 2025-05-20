@@ -36,7 +36,7 @@ export default function EventForm({ onCreate }: Props) {
   return (
     <form
       onSubmit={handleSubmit}
-      className="flex flex-col gap-2 border border-gray-300 p-4 rounded-lg bg-white shadow-md animate-fade-in"
+      className="neu flex flex-col gap-2 p-4 animate-fade-in"
     >
       <h2 className="font-semibold">Create Event</h2>
       <input
@@ -44,32 +44,32 @@ export default function EventForm({ onCreate }: Props) {
         value={form.title}
         onChange={handleChange}
         placeholder="Title"
-        className="border border-gray-300 bg-white p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-600"
+        className="neu p-2 focus:outline-none focus:ring-2 focus:ring-blue-600"
       />
       <textarea
         name="description"
         value={form.description}
         onChange={handleChange}
         placeholder="Description"
-        className="border border-gray-300 bg-white p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-600"
+        className="neu p-2 focus:outline-none focus:ring-2 focus:ring-blue-600"
       />
       <input
         name="date"
         type="date"
         value={form.date}
         onChange={handleChange}
-        className="border border-gray-300 bg-white p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-600"
+        className="neu p-2 focus:outline-none focus:ring-2 focus:ring-blue-600"
       />
       <input
         name="location"
         value={form.location}
         onChange={handleChange}
         placeholder="Location"
-        className="border border-gray-300 bg-white p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-600"
+        className="neu p-2 focus:outline-none focus:ring-2 focus:ring-blue-600"
       />
       <button
         type="submit"
-        className="bg-blue-600 hover:bg-blue-700 transition-colors text-white px-4 py-2 rounded self-start"
+        className="neu px-4 py-2 self-start"
       >
         Add Event
       </button>

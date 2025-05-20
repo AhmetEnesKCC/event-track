@@ -25,10 +25,10 @@ export default function ParticipantList({ event, onUpdate }: Props) {
   }
 
   return (
-    <div className="animate-fade-in">
+    <div className="neu p-4 animate-fade-in">
       <button
         onClick={toggleJoin}
-        className="bg-green-600 hover:bg-green-700 transition-colors text-white px-4 py-2 rounded w-fit"
+        className="neu px-4 py-2 w-fit"
       >
         {event.participants.includes(user) ? 'Leave' : 'Join'} Event
       </button>

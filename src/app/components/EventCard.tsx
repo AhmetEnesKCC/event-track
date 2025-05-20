@@ -35,7 +35,7 @@ export default function EventCard({ event, onUpdate }: Props) {
   }
 
   return (
-    <li className="border border-gray-300 rounded-lg bg-white p-4 shadow transition-transform hover:scale-105 animate-fade-in">
+    <li className="neu p-4 transition-transform hover:scale-105 animate-fade-in">
       <h3 className="font-semibold text-lg">
         <Link href={`/events/${event.id}`} className="hover:underline">
           {event.title}
@@ -47,7 +47,7 @@ export default function EventCard({ event, onUpdate }: Props) {
       <div className="flex gap-2 mt-2">
         <button
           onClick={toggleJoin}
-          className="bg-green-600 hover:bg-green-700 transition-colors text-white px-2 py-1 rounded"
+          className="neu px-2 py-1"
         >
           {event.participants.includes(user) ? 'Leave' : 'Join'}
         </button>

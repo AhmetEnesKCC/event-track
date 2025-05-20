@@ -24,7 +24,7 @@ export default function Home() {
   }, [router])
 
   return (
-    <div className="p-4 flex flex-col gap-8 max-w-xl mx-auto animate-fade-in">
+    <div className="p-4 neu flex flex-col gap-8 max-w-xl mx-auto animate-fade-in">
       <h1 className="text-3xl font-bold">Events</h1>
       <EventForm onCreate={setEvents} />
       <ul className="space-y-4">
