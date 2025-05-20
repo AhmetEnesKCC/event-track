@@ -30,7 +30,7 @@ export default function CommentList({ event, onUpdate }: Props) {
         {event.comments.map((c, i) => (
           <li
             key={i}
-            className="border border-white/20 p-2 rounded bg-white/10 backdrop-blur"
+            className="border border-gray-300 p-2 rounded bg-gray-50"
           >
             <strong>{c.user}: </strong>
             {c.text}
@@ -39,7 +39,7 @@ export default function CommentList({ event, onUpdate }: Props) {
       </ul>
       <form onSubmit={addComment} className="flex gap-2">
         <input
-          className="border border-white/20 bg-transparent p-2 rounded flex-1 focus:outline-none focus:ring-2 focus:ring-blue-600"
+          className="border border-gray-300 bg-white p-2 rounded flex-1 focus:outline-none focus:ring-2 focus:ring-blue-600"
           placeholder="Add a comment"
           value={text}
           onChange={(e) => setText(e.target.value)}

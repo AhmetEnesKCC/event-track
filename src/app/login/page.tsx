@@ -28,14 +28,14 @@ export default function Login() {
       <h1 className="text-3xl font-bold">Login</h1>
       <form
         onSubmit={handleSubmit}
-        className="flex flex-col gap-4 w-full bg-white/10 backdrop-blur p-6 rounded-lg shadow-md"
+        className="flex flex-col gap-4 w-full bg-white p-6 rounded-lg shadow-md"
       >
         <input
           type="text"
           value={name}
           onChange={(e) => setName(e.target.value)}
           placeholder="Enter your name"
-          className="border border-white/20 bg-transparent p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-600"
+          className="border border-gray-300 bg-white p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-600"
         />
         <button
           type="submit"
