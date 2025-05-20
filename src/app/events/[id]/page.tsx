@@ -2,7 +2,12 @@
 
 import { useEffect, useState } from 'react'
 import { useParams, useRouter } from 'next/navigation'
-import Link from 'next/link'
+
+import { Event } from '@/types'
+import { loadEvents, saveEvents } from '@/lib/storage'
+import ParticipantList from '@/app/components/ParticipantList'
+import CommentList from '@/app/components/CommentList'
+
 
 interface Comment {
   user: string
@@ -36,10 +41,12 @@ const saveEvents = (events: Event[]) => {
 
 const loadUser = () => (typeof window !== 'undefined' ? localStorage.getItem('username') || '' : '')
 
+
 export default function EventPage() {
   const params = useParams<{ id: string }>()
   const router = useRouter()
   const [event, setEvent] = useState<Event | null>(null)
+
   const [comment, setComment] = useState('')
   const user = loadUser()
 
@@ -54,10 +61,13 @@ export default function EventPage() {
   }, [params.id, router])
 
   const updateEvent = (ev: Event) => {
+
     const events = loadEvents().map((e) => (e.id === ev.id ? ev : e))
+
     saveEvents(events)
     setEvent(ev)
   }
+
 
   const toggleJoin = () => {
     if (!event) return
@@ -77,6 +87,7 @@ export default function EventPage() {
     setComment('')
     updateEvent({ ...event, comments })
   }
+
 
   if (!event) return null
 

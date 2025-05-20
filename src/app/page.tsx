@@ -1,8 +1,14 @@
 'use client'
 
+
+import { useRouter } from 'next/navigation'
+import { Event } from '@/types'
+import { loadUser, loadEvents } from '@/lib/storage'
+import EventForm from './components/EventForm'
+import EventCard from './components/EventCard'
+
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
-import { useRouter } from 'next/navigation'
 
 interface Comment {
   user: string
@@ -36,11 +42,14 @@ const saveEvents = (events: Event[]) => {
   }
 }
 
+
 export default function Home() {
   const router = useRouter()
   const [user, setUser] = useState('')
   const [events, setEvents] = useState<Event[]>([])
+
   const [form, setForm] = useState({ title: '', description: '', date: '', location: '' })
+
 
   useEffect(() => {
     const u = loadUser()
@@ -51,7 +60,7 @@ export default function Home() {
     setUser(u)
     setEvents(loadEvents())
   }, [router])
-
+  
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value })
   }
@@ -116,6 +125,7 @@ export default function Home() {
               <span className="text-sm self-center">{ev.participants.length} going</span>
             </div>
           </li>
+
         ))}
       </ul>
     </div>
