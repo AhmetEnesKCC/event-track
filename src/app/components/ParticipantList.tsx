@@ -25,13 +25,16 @@ export default function ParticipantList({ event, onUpdate }: Props) {
   }
 
   return (
-    <div>
-      <button onClick={toggleJoin} className="bg-green-600 text-white px-4 py-2 rounded w-fit">
+    <div className="animate-fade-in">
+      <button
+        onClick={toggleJoin}
+        className="bg-green-600 hover:bg-green-700 transition-colors text-white px-4 py-2 rounded w-fit"
+      >
         {event.participants.includes(user) ? 'Leave' : 'Join'} Event
       </button>
       <h2 className="font-semibold mt-4">Participants ({event.participants.length})</h2>
-      <ul className="list-disc pl-4">
-        {event.participants.map(p => (
+      <ul className="list-disc pl-4 space-y-1">
+        {event.participants.map((p) => (
           <li key={p}>{p}</li>
         ))}
       </ul>
