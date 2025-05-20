@@ -2,7 +2,9 @@
 
 import { useRouter } from 'next/navigation'
 import { useState } from 'react'
+
 import { saveUser } from '@/lib/storage'
+
 
 export default function Login() {
   const router = useRouter()
@@ -11,7 +13,13 @@ export default function Login() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     if (!name) return
+
     saveUser(name)
+
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('username', name)
+    }
+
     router.push('/')
   }
 
