@@ -35,13 +35,13 @@ export default function EventCard({ event, onUpdate }: Props) {
   }
 
   return (
-    <li className="border border-white/20 rounded-lg bg-white/10 backdrop-blur-md p-4 shadow transition-transform hover:scale-105 animate-fade-in">
+    <li className="border border-gray-300 rounded-lg bg-white p-4 shadow transition-transform hover:scale-105 animate-fade-in">
       <h3 className="font-semibold text-lg">
         <Link href={`/events/${event.id}`} className="hover:underline">
           {event.title}
         </Link>
       </h3>
-      <p className="text-sm text-gray-200">
+      <p className="text-sm text-gray-600">
         {event.date} - {event.location}
       </p>
       <div className="flex gap-2 mt-2">

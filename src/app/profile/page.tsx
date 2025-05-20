@@ -23,7 +23,7 @@ export default function Profile() {
       <h2 className="font-semibold">Joined Events</h2>
       <ul className="space-y-2">
         {events.map((ev) => (
-          <li key={ev.id} className="border border-white/20 p-2 rounded bg-white/10 backdrop-blur">
+          <li key={ev.id} className="border border-gray-300 p-2 rounded bg-white">
             <Link href={`/events/${ev.id}`} className="hover:underline">
               {ev.title}
             </Link>

@@ -36,7 +36,7 @@ export default function EventForm({ onCreate }: Props) {
   return (
     <form
       onSubmit={handleSubmit}
-      className="flex flex-col gap-2 border border-white/20 p-4 rounded-lg bg-white/10 backdrop-blur-md shadow-md animate-fade-in"
+      className="flex flex-col gap-2 border border-gray-300 p-4 rounded-lg bg-white shadow-md animate-fade-in"
     >
       <h2 className="font-semibold">Create Event</h2>
       <input
@@ -44,28 +44,28 @@ export default function EventForm({ onCreate }: Props) {
         value={form.title}
         onChange={handleChange}
         placeholder="Title"
-        className="border border-white/20 bg-transparent p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-600"
+        className="border border-gray-300 bg-white p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-600"
       />
       <textarea
         name="description"
         value={form.description}
         onChange={handleChange}
         placeholder="Description"
-        className="border border-white/20 bg-transparent p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-600"
+        className="border border-gray-300 bg-white p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-600"
       />
       <input
         name="date"
         type="date"
         value={form.date}
         onChange={handleChange}
-        className="border border-white/20 bg-transparent p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-600"
+        className="border border-gray-300 bg-white p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-600"
       />
       <input
         name="location"
         value={form.location}
         onChange={handleChange}
         placeholder="Location"
-        className="border border-white/20 bg-transparent p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-600"
+        className="border border-gray-300 bg-white p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-600"
       />
       <button
         type="submit"
