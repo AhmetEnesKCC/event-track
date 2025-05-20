@@ -57,7 +57,7 @@ export default function EventPage() {
   if (!event) return null;
 
   return (
-    <div className="p-4 flex flex-col gap-4 max-w-xl mx-auto animate-fade-in">
+    <div className="p-4 neu flex flex-col gap-4 max-w-xl mx-auto animate-fade-in">
       <Link href="/" className="text-blue-300 hover:text-white transition">
         ← Back
       </Link>

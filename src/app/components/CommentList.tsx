@@ -24,13 +24,13 @@ export default function CommentList({ event, onUpdate }: Props) {
   }
 
   return (
-    <div className="animate-fade-in">
+    <div className="neu p-4 animate-fade-in">
       <h2 className="font-semibold mt-4 mb-2">Comments</h2>
       <ul className="space-y-2 mb-4">
         {event.comments.map((c, i) => (
           <li
             key={i}
-            className="border border-gray-300 p-2 rounded bg-gray-50"
+            className="neu p-2"
           >
             <strong>{c.user}: </strong>
             {c.text}
@@ -39,14 +39,14 @@ export default function CommentList({ event, onUpdate }: Props) {
       </ul>
       <form onSubmit={addComment} className="flex gap-2">
         <input
-          className="border border-gray-300 bg-white p-2 rounded flex-1 focus:outline-none focus:ring-2 focus:ring-blue-600"
+          className="neu p-2 flex-1 focus:outline-none focus:ring-2 focus:ring-blue-600"
           placeholder="Add a comment"
           value={text}
           onChange={(e) => setText(e.target.value)}
         />
         <button
           type="submit"
-          className="bg-blue-600 hover:bg-blue-700 transition-colors text-white px-4 py-2 rounded"
+          className="neu px-4 py-2"
         >
           Add
         </button>

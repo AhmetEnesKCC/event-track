@@ -24,22 +24,22 @@ export default function Login() {
   }
 
   return (
-    <div className="p-4 flex flex-col items-center gap-6 max-w-md mx-auto animate-fade-in">
+    <div className="p-4 neu flex flex-col items-center gap-6 max-w-md mx-auto animate-fade-in">
       <h1 className="text-3xl font-bold">Login</h1>
       <form
         onSubmit={handleSubmit}
-        className="flex flex-col gap-4 w-full bg-white p-6 rounded-lg shadow-md"
+        className="neu flex flex-col gap-4 w-full p-6"
       >
         <input
           type="text"
           value={name}
           onChange={(e) => setName(e.target.value)}
           placeholder="Enter your name"
-          className="border border-gray-300 bg-white p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-600"
+          className="neu p-2 focus:outline-none focus:ring-2 focus:ring-blue-600"
         />
         <button
           type="submit"
-          className="bg-blue-600 hover:bg-blue-700 transition-colors text-white px-4 py-2 rounded"
+          className="neu px-4 py-2"
         >
           Continue
         </button>
